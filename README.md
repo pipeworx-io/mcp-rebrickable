@@ -1,15 +1,27 @@
-# mcp-rebrickable
+# @pipeworx/rebrickable
 
-Rebrickable MCP.
+[Rebrickable](https://rebrickable.com) MCP — LEGO sets, parts, minifigures, themes. Free API key required.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
+
+## Auth
+
+- Platform: `PLATFORM_REBRICKABLE_KEY`. BYO: `?_apiKey=…`.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `sets` | Search sets. |
-| `parts` | Search parts. |
+- `sets(query?, theme_id?, min_year?, max_year?, min_parts?, max_parts?, ordering?, page?, page_size?)` — search sets
+- `set(set_num)` — single set
+- `set_parts(set_num)` — parts in a set
+- `set_minifigs(set_num)` — minifigs in a set
+- `parts(query?, color_id?, part_cat_id?, ordering?, page?, page_size?)` — search parts
+- `part(part_num)` — single part
+- `themes()` — list themes
+- `colors()` — list colors
+
+## Data source
+
+`https://rebrickable.com/api/v3/lego/`
 
 ## Quick Start
 
@@ -25,7 +37,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -49,7 +61,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
