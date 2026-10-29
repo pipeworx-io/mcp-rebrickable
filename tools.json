@@ -1,0 +1,141 @@
+[
+  {
+    "name": "sets",
+    "description": "Search Rebrickable LEGO sets by keyword, theme_id, year range, or part count range. Returns set number, name, year, part count, theme, and image URL. Use `themes` to get valid theme IDs.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "theme_id": {
+          "type": "number"
+        },
+        "min_year": {
+          "type": "number"
+        },
+        "max_year": {
+          "type": "number"
+        },
+        "min_parts": {
+          "type": "number"
+        },
+        "max_parts": {
+          "type": "number"
+        },
+        "ordering": {
+          "type": "string"
+        },
+        "page": {
+          "type": "number"
+        },
+        "page_size": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "set",
+    "description": "Fetch a single LEGO set by `set_num` (e.g. \"75192-1\") from Rebrickable. Returns set name, year, theme, part count, and image URL.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "set_num": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "set_num"
+      ]
+    }
+  },
+  {
+    "name": "set_parts",
+    "description": "Fetch the full parts list for a LEGO set by `set_num` from Rebrickable. Returns each part's part_num, name, color, quantity, and image URL.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "set_num": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "set_num"
+      ]
+    }
+  },
+  {
+    "name": "set_minifigs",
+    "description": "Fetch the minifigures included in a LEGO set by `set_num` from Rebrickable. Returns each minifig's set_num, name, quantity, and image URL.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "set_num": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "set_num"
+      ]
+    }
+  },
+  {
+    "name": "parts",
+    "description": "Search Rebrickable LEGO parts by keyword, color_id, or part_cat_id. Returns part number, name, part category, and image URL. Use `colors` or category list to get valid IDs.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "color_id": {
+          "type": "number"
+        },
+        "part_cat_id": {
+          "type": "number"
+        },
+        "ordering": {
+          "type": "string"
+        },
+        "page": {
+          "type": "number"
+        },
+        "page_size": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "part",
+    "description": "Fetch details for a single LEGO part by `part_num` from Rebrickable. Returns part name, category, material, and image URLs across available colors.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "part_num": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "part_num"
+      ]
+    }
+  },
+  {
+    "name": "themes",
+    "description": "Return the complete list of LEGO themes from Rebrickable (e.g. Star Wars, Technic, City). Returns theme id, name, and parent_id. Use to get valid theme_id values for filtering `sets`.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "colors",
+    "description": "Return the complete list of LEGO colors from Rebrickable with color id, name, RGB hex code, and is_trans flag. Use to get valid color_id values for filtering `parts`.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  }
+]
