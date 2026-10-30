@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-rebrickable",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Rebrickable MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "rebrickable",
     "gatewaySlug": "rebrickable",
-    "sourceHash": "v1-64ad15cfc90a14a6bc4470a4ae975089f28e2fd947ca0b5341ccbec18693df51",
-    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
+    "sourceHash": "v1-ea4b8985ee4dde3c9353c4cf41ee89b13c146c6f9fc5705866f850b886a7d7ac",
+    "sourceCommit": "748d0e6962c0a171a91cad30f4106ffd22aed2b7"
   }
 }
